@@ -1,6 +1,4 @@
 import express from "express";
-import morgan from "morgan";
-import cors from "cors";
 // import apiRouter from "./routes";
 import config from "./config";
 import router from "./routes"
