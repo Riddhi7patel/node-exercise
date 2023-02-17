@@ -1,5 +1,6 @@
 import express from "express";
-import db from "../mockdb";
+import db from "../mockdb/index";
+import employees from "../controllers/employees.controller"
 
 const router = express.Router();
 
@@ -11,7 +12,7 @@ router.get("/:id?", async (req, res, next) => {
     if (id) {
       data = await db.getOne(id);
     } else {
-      data = await db.getAll();
+      data = await employees.getAll();
     }
 
     res.json(data);

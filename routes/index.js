@@ -1,6 +1,7 @@
 import express from "express";
 // TODO: import router from users.route
 import usersRouter from "./users.route"
+
 const router = express.Router();
 
 router.get("/test", (req, res) => {
